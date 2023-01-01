@@ -17,7 +17,7 @@ public class HelloServlet extends HttpServlet{
 		// 서블릿이 초기화 될 때 호출되는 method
 		// 1.서블릿의 초기화 작업 담당 
 		System.out.println("HttpServlet init() is called " );
-	}S$
+	}
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
