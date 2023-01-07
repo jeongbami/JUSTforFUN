@@ -8,8 +8,8 @@ import java.util.Scanner;
 import java.util.Set;
 
 class ModelController {
+	//작업 결과를 map에 저장
 	public String main(HashMap map) {
-		//작업 결과를 map에 저장
 		map.put("id", "asdf");
 		map.put("pwd", "1111");
 		

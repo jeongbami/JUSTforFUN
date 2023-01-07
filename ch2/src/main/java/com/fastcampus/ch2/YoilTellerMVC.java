@@ -4,23 +4,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Calendar;
 
 @Controller
 public class YoilTellerMVC {
+
     // http://localhost:8080/ch2/getYoilMVC?year=2021&month=10&day=1
-    
     // public static void main(String[] args) {
     // public void main(HttpServletRequest request, HttpServletResponse response) throws IOException {
     
 	@RequestMapping("/getYoilMVC") 
     public String main(int year, int month, int day, Model model) throws IOException {	
-
-    	//1. 유효성 검사 기능 추가
+		
+    
+		//1. 유효성 검사 기능 추가
     	//2. 코드 분리 (method로 추가해주기)
     	//		- 요일 반환 method 
     	//		- 유효성 검사 method	
@@ -48,9 +46,6 @@ public class YoilTellerMVC {
        	return "yoil";
     }
 
-	private boolean isValid(int year, int month, int day) {
-		return true;
-	}
 
 	private char getYoil(int year, int month, int day) {
 		Calendar cal = Calendar.getInstance();
@@ -61,4 +56,10 @@ public class YoilTellerMVC {
         
         
 	}
+    private boolean isValid(int year, int month, int day) {    
+    	if(year==-1 || month==-1 || day==-1) 
+    		return false;
+    	
+    	return (1<=month && month<=12) && (1<=day && day<=31); // 간단히 체크 
+    }
 }
