@@ -21,7 +21,7 @@ public class YoilTellerMVC4 {
     // public void main(HttpServletRequest request, HttpServletResponse response) throws IOException {
     
 	@RequestMapping("/getYoilMVC4") 
-    public String main(MyDate date, Model model)throws IOException {	
+    public String main(MyDate date, Model model) {	
 		
     
 		//1. 유효성 검사 기능 추가
@@ -57,7 +57,7 @@ public class YoilTellerMVC4 {
 	}
 
 	private boolean isValid(MyDate date) {
-		return isValid(date.getDay(), date.getMonth(), date.getYear());
+		return isValid(date.getYear(), date.getMonth(), date.getDay());
 	}
 
 	private char getYoil(int year, int month, int day) {
@@ -72,7 +72,8 @@ public class YoilTellerMVC4 {
 	private boolean isValid(int year, int month, int day) {
 		if(year == -1 || month == -1 || day == -1) 
 		return false;
-		return false;
+		
+		return (1<=month && month<=12) && (1<=day && day<=31); 
 	}
 
 }

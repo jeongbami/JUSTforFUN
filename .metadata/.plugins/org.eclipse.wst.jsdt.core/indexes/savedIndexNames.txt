@@ -1,10 +1,7 @@
 INDEX VERSION 1.4+/Users/JEONG/workspace/spring_basic_learn/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-1696898206.index
-949800735.index
-2845177902.index
-2252774715.index
-2845177902.index
-2682262919.index
 3878136014.index
-3524150192.index
+949800735.index
+2252774715.index
 4135036194.index
+1696898206.index
+2682262919.index
